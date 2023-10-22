@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card{
+    justify-content: center;
+    align-items: center;
+}
+
+
+.isichat{
+    height: 200px;
+    border: solid rgb(2, 2, 2);
+    width: 100%;
+}

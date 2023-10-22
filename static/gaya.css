@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center; /* Horisontal centering */
+    align-items: center; /* Vertical centering */
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./3.jpg")
+}
+.container {
+    
+    justify-content: center; /* Horisontal centering */
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffffbc;
+    
+}
+
+.container h1{
+    text-align: center;
+}
+
+.input-container {
+    margin: 10px;
+}
+.input-container input {
+    width: 100px;
+}

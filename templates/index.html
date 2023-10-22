@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='gaya.css')}}">
+
+    <title>login</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+    <form action="/login" method="post">
+        <h1>login</h1>
+        <p>Masukan ID: <br></p>
+        <input type="text" autocomplete="off" name="angka1" placeholder="masukan nama anda">
+        <p>Masukan password: <br></p>
+        <input type="password" autocomplete="off" autosave="none" name="angka2" placeholder="masukan nama anda"><br>
+        <input type="submit" value="Login">
+        <p>buat akun <a href="/buatakun">sign in</a>  </p>
+    </form>
+
+</div>
+</body>
+</html>

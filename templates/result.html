@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='gayabeut.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+    <script type="text/javascript" href="{{url_for('static', filename='scrip.js')}}"></script></script>
+
+
+
+
+    <div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        {{ message }}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    
+    {% if hasil %}
+    <p>Selamat datang  .{{ hasil }}!!</p>
+    {%else%}
+    <p>Salah mas</p>
+    {% endif %}
+    <form  method="post">               
+<div class="card">
+    
+        <div class="isichat" id="chat" type="text">
+            <p>{{chat}}</p>
+        </div>
+        <input type="text" name="chatting" autocomplete="none" placeholder="Chat sekarang">
+        <p><input type="submit"  name="kirim"></p>
+    </div>
+    
+
+</div>
+
+</body>
+</form>
+   
+</body>
+</html>
