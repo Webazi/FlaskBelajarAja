@@ -24,8 +24,8 @@
     {% endwith %}
 
     
-    {% if hasil %}
-    <p>Selamat datang  .{{ hasil }}!!</p>
+    {% if session %}
+    <p>Selamat datang  .{{ user }}!!</p>
     {%else%}
     <p>Salah mas</p>
     {% endif %}
@@ -37,6 +37,8 @@
         </div>
         <input type="text" name="chatting" autocomplete="none" placeholder="Chat sekarang">
         <p><input type="submit"  name="kirim"></p>
+
+        
     </div>
     
 
@@ -44,6 +46,6 @@
 
 </body>
 </form>
-   
+<a method="post" href="/keluar"><button>log out</button></a>
 </body>
 </html>
