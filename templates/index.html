@@ -1,25 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    
-        <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='gaya.css')}}">
 
-    <title>login</title>
+<h1><!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.scss')}}">
+    <script type="text/javascript" href="{{url_for('static', filename='script.js')}}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
     
-    <div class="container">
-        
-    <form action="/login" method="post">
-        <h1>login</h1>
-        <p>Masukan ID: <br></p>
-        <input type="text" autocomplete="off" name="user" placeholder="masukan nama anda">
-        <p>Masukan password: <br></p>
-        <input type="password" autocomplete="off" autosave="none" name="angka2" placeholder="masukan nama anda"><br>
-        <input type="submit" value="Login">
-        <p>buat akun <a href="/buatakun">sign in</a>  </p>
-    </form>
+    
+</html></h1>
+<form action="/login" method="POST">
+<div class="form-structor">
+	
+	<div class="signup">
+		<h2 class="form-title" id="signup"><span>Sign Up </span> Di sini</h2>
+		<div class="form-holder">
+			<input type="text" autocomplete="none" class="input" name="user" placeholder="Name" />
+			<input type="email" autocomplete="none" class="input" name="email" placeholder="Email" />
+			<input type="password" autocomplete="none" class="input" name="pw" placeholder="Password" />
+		</div>
+		<button class="submit-btn">Sign up</button>
+	</form>
 
+	
+	</div>
+	<form action="/login" method="POST">
+	<div type="block" class="login slide-up">
+		<div class="center">
+			<h2 class="form-title" id="login" onclick="click"><span>Log in </span>di sini</h2>
+			<div class="form-holder">
+				<input type="email" class="input" name="user"  placeholder="Email" />
+				<input type="password" class="input" name="pw" placeholder="Password" />
+			</div>``
+			<button class="submit-btn" value="submit">Log in</button>
+		</div>
+	</div>
+</form>
 </div>
-</body>
-</html>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>

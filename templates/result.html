@@ -1,51 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='gayabeut.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='gayabeut.css')}}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main</title>
 </head>
-<body>  
 
-    <script type="text/javascript" href="{{url_for('static', filename='scrip.js')}}"></script></script>
+<body>
+   
+    
 
+    <div class="info">
+        <div class="isi">
+            
+          
+                
+            <div class="akun">
+                <h1>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    {{ message }}
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                </h1>
 
+                {% if user %}
+                <p>Akun:{{ user }}</p>
+                {%else%}
+                <p>Salah mas</p>
+                {% endif %}
+            </div>
+            <div class="search">
+                <input placeholder="cari sesuatu" type="search">
+            </div>
+        
+            <div class="logout">
+                <a method="post" href="/keluar"><button>log out</button></a>
+            </div>
+            <div class="upload">
+                <p><a href="/upload">upload foto</a></p>
+               
+            </div>
 
+            </div>
+            </div>
+        </div>
+    </div>
+
+  
 
     <div class="container">
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-        {{ message }}
-        {% endfor %}
-    {% endif %}
-    {% endwith %}
+      
+        <div class="konten">
 
-    
-    {% if session %}
-    <p>Selamat datang  .{{ user }}!!</p>
-    {%else%}
-    <p>Salah mas</p>
-    {% endif %}
-    <form  method="post">               
-<div class="card">
-    
-        <div class="isichat" id="chat" type="text">
-            <p>{{chat}}</p>
-        </div>
-        <input type="text" name="chatting" autocomplete="none" placeholder="Chat sekarang">
-        <p><input type="submit"  name="kirim"></p>
+            <img src="static/2.jpg" alt="">
+            <h1>Title</h1>
+            <p>deskripsi</p>
 
-        
-    </div>
-    
+            <form method="post">
+                <div class="card">
+
+                    <div class="isichat" id="chat" type="text">
+                        <p>{{chat}}</p>
+                    </div>
+                    <input type="text" name="chatting" autocomplete="none" placeholder="Chat sekarang">
+                    <p><input type="submit" name="kirim"></p>
+
+
+                </div>
+
 
 
 
 </body>
 </form>
-<a method="post" href="/keluar"><button>log out</button></a></div>
+</div>
+</div>
+<script type="text/javascript" href="{{url_for('static', filename='1.js')}}"></script>
+
+
 </body>
+
 </html>

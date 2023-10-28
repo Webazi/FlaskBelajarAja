@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="/">keluar</a></p>
+    <div class="container">
+        <h2>Form Input Gambar</h2>
+        <form id="imageForm">
+            <input type="file" id="imageInput" accept="image/*">
+            <input type="text" id="titleInput" placeholder="Title">
+            <textarea id="descriptionInput" placeholder="Deskripsi"></textarea>
+            <button type="button" onclick="showImageInfo()">Tampilkan Info</button>
+        </form>
+        <div id="imageInfo" style="display: none;">
+            <h3>Informasi Gambar</h3>
+            <p id="titleDisplay"></p>
+            <p id="descriptionDisplay"></p>
+            <img id="imageDisplay" src="" alt="Gambar">
+        </div>
+    </div>
+
+    <script>
+        function showImageInfo() {
+            const title = document.getElementById("titleInput").value;
+            const description = document.getElementById("descriptionInput").value;
+            const imageInput = document.getElementById("imageInput");
+            const imageInfo = document.getElementById("imageInfo");
+            const titleDisplay = document.getElementById("titleDisplay");
+            const descriptionDisplay = document.getElementById("descriptionDisplay");
+            const imageDisplay = document.getElementById("imageDisplay");
+
+            if (imageInput.files.length > 0) {
+                const imageFile = imageInput.files[0];
+                const imageURL = URL.createObjectURL(imageFile);
+                titleDisplay.textContent = "Title: " + title;
+                descriptionDisplay.textContent = "Deskripsi: " + description;
+                imageDisplay.src = imageURL;
+                imageInfo.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,7 +1,23 @@
 body{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin: 20px;
+}
+
+.konten{
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
 }
 
@@ -12,7 +28,38 @@ body{
 
 
 .isichat{
-    height: 200px;
+    height: 50px;
     border: solid rgb(2, 2, 2);
     width: 100%;
+}
+
+.info{
+    position: fixed;
+    display: flex;
+    background-color: aqua;
+    height: 100%;
+   
+}
+
+.isi {
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+}
+
+.search{
+    padding: 30px;
+    margin: 10px;
+    
+    
+}
+.logout:hover{
+    color: azure;
+    cursor: pointer;
+}
+
+.upload p{
+    text-decoration: none;
+    text-underline-offset: none;
+    color: black;
 }
